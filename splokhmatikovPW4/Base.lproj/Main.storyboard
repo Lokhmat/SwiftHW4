@@ -120,8 +120,52 @@
             </objects>
             <point key="canvasLocation" x="100.00000000000001" y="93.75"/>
         </scene>
+        <!--Note View Controller-->
+        <scene sceneID="bOf-6X-V2b">
+            <objects>
+                <viewController storyboardIdentifier="NoteViewController" id="fWe-T4-Qbg" customClass="NoteViewController" customModule="splokhmatikovPW4" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WUI-if-otf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Note title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mp8-Y5-13j">
+                                <rect key="frame" x="20" y="54" width="87.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HcP-jC-xjV">
+                                <rect key="frame" x="20" y="105" width="374" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yhj-oG-o0b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yhj-oG-o0b" firstAttribute="trailing" secondItem="HcP-jC-xjV" secondAttribute="trailing" constant="20" id="04n-WR-bem"/>
+                            <constraint firstItem="Mp8-Y5-13j" firstAttribute="leading" secondItem="yhj-oG-o0b" secondAttribute="leading" constant="20" id="7ee-Ke-NTS"/>
+                            <constraint firstItem="HcP-jC-xjV" firstAttribute="bottom" secondItem="yhj-oG-o0b" secondAttribute="bottom" constant="1" id="DSk-1N-jpq"/>
+                            <constraint firstItem="HcP-jC-xjV" firstAttribute="leading" secondItem="yhj-oG-o0b" secondAttribute="leading" constant="20" id="KMJ-V5-szz"/>
+                            <constraint firstItem="HcP-jC-xjV" firstAttribute="top" secondItem="Mp8-Y5-13j" secondAttribute="bottom" constant="17" id="TNu-8o-T9A"/>
+                            <constraint firstItem="Mp8-Y5-13j" firstAttribute="top" secondItem="yhj-oG-o0b" secondAttribute="top" constant="10" id="bin-dv-Est"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="HcP-jC-xjV" id="lip-0K-zik"/>
+                        <outlet property="titleTextField" destination="Mp8-Y5-13j" id="uWh-5N-v8c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rjJ-UT-LuA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1792.753623188406" y="93.75"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
